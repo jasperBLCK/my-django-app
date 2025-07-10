@@ -35,7 +35,7 @@ def login(request):
                 response = redirect('profile_view')
                 response.set_cookie('access_token', str(refresh.access_token), httponly=True, secure=True)
                 messages.success(request, 'Вход выполнен успешно')
-                return render(request, 'users/index.html')
+                return render(request, 'users/profile.html')
             else:
                 messages.error(request, 'Неверный пароль')
                 return render(request, 'users/login.html')
