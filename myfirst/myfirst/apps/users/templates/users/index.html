@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Главная страница</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #4a90e2;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+    }
+    nav a {
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #002d72;
+    }
+    main {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+      padding: 40px;
+      text-align: center;
+    }
+    main h2 {
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #4a90e2;
+    }
+    main p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Добро пожаловать на наш сайт!
+  </header>
+  <nav>
+    <a href="{% url 'register' %}">Регистрация</a>
+    <a href="{% url 'login' %}">Вход</a>
+    <a href="{% url 'profile_view' %}">Профиль</a>
+  </nav>
+  <main>
+    <h2>Главная страница</h2>
+    <p>
+      Это главная страница вашего проекта. Здесь вы можете перейти к регистрации нового пользователя,
+      войти в систему, просмотреть свой профиль или выйти из аккаунта.
+    </p>
+  </main>
+  <footer>
+    &copy; 2025 Ваш проект. Все права защищены.
+  </footer>
+</body>
+</html>
