@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Погода</title>
+</head>
+<body>
+    <h1>Погода сейчас</h1>
+
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% else %}
+        <p>Температура (°C): {{ temp }}</p>
+        <p>Ощущается как (°C): {{ feels_like }}</p>
+    {% endif %}
+</body>
+</html>
