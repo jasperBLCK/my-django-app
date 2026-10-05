@@ -1,8 +1,10 @@
 from django.shortcuts import render
+import os
+
 import requests
 
 def weather_view(request):
-    access_key = '***REMOVED***'
+    access_key = os.getenv('YANDEX_WEATHER_API_KEY', '')
 
     headers = {
         'X-Yandex-API-Key': access_key
